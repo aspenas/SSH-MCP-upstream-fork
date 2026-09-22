@@ -11,7 +11,7 @@
     "build": "tsc",
     "dev": "ts-node src/index.ts",
     "start": "node build/index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "npm run build && node --test test/*.test.mjs"
   },
   "keywords": ["mcp", "ssh", "serial", "console", "network", "switch"],
   "author": "",
@@ -20,7 +20,8 @@
     "@modelcontextprotocol/sdk": "^0.6.0",
     "ssh2": "^1.11.0",
     "serialport": "^12.0.0",
-    "@serialport/parser-readline": "^12.0.0"
+    "@serialport/parser-readline": "^12.0.0",
+    "dotenv": "^16.4.1"
   },
   "devDependencies": {
     "@types/node": "^18.0.0",
